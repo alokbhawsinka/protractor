@@ -17,13 +17,13 @@ describe('todoMVC Home Page', function() {
     addTodo.submit();
     expect(todoList.get(0).getText()).to.eventually.equal('Test Todo');
   })
-  it('Shold todo list count is equal to the length', function(){
-    expect(todoList.count()).to.eventually.equal(1);
-  })
   it('should able to edit a todo on double click', function(){
     var ele = element(by.css('.view > label'));
     browser.actions().doubleClick(ele).perform();
     // expect().to.eventually.be;
+  })
+  it('Shold todo list count is equal to the length', function(){
+    expect(todoList.count()).to.eventually.equal(1);
   })
   // it('should update editable todo item', function(){
   //   element.getAttribute('value')
